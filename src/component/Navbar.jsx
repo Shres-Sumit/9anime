@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between items-center p-5 bg-gray-800">
+        <nav className="flex justify-between items-center p-5">
             <div className="relative flex gap-7 items-center">
                 {/* Hamburger Menu */}
                 <div className="relative group">
