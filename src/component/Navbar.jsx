@@ -19,7 +19,7 @@ const Navbar = () => {
                                     to=""
                                     className="block px-4 py-2 hover:bg-purple-950"
                                 >
-                                    HOME
+                                    HO
                                 </Link>
                             </li>
 
