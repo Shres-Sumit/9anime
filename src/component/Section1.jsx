@@ -4,7 +4,7 @@ const Section1 = () => {
     return (
         <section class="flex flex-col items-center justify-center  h-96 mt-1 max-w-xl mx-auto">
             <div>
-                <img class="w-44 h-16  " src="https://9animetv.to/images/logo.png" alt="" />
+                <img class="w-52 h-16  " src="https://9animetv.to/images/logo.png" alt="" />
             </div>
             <div class="w-full mt-12">
                 <div class="flex items-center gap-2 w-full">
