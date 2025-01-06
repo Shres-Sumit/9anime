@@ -15,6 +15,7 @@ const Navbar = () => {
                     <div className="absolute top-full left-0 hidden group-hover:flex flex-col w-32 py-2 bg-purple-900 text-white rounded-lg mt-1 shadow-lg z-10">
                         <ul className="flex flex-col gap-3 font-semibold">
                             {/* HOME */}
+
                             <ListNav title={'HOME'} className={''} />
                             <ListNav title={'GENRES'} className={'group/genre'} >
                                 <p className="px-4 py-2 hover:bg-purple-950 cursor-pointer">
