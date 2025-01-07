@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ListNav from './ListNav';
+import { IoSearch } from "react-icons/io5";
+import { FaReddit } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import PopupLogin from './PopupLogin';
 import PopupRegister from './PopupRegister';
 
+
 const Navbar = () => {
+    const location = useLocation()
+    const isHome = location.pathname === '/home'
     const [showPopup, setShowPopup] = useState(false);
     const [popupType, setPopupType] = useState('login');
 
@@ -16,6 +24,12 @@ const Navbar = () => {
     const closePopup = () => {
         setShowPopup(false)
     }
+
+
+
+
+
+
 
     return (
         <>
@@ -57,6 +71,38 @@ const Navbar = () => {
                     />
                 </div>
 
+
+
+                <div className='flex items-center gap-4'>
+                    {
+                        isHome && (
+                            <div className='flex w-112 px-4 gap-4 box-border'>
+                                <div className='relative'>
+                                    <input
+                                        type="text"
+                                        placeholder='Enter anime name'
+                                        className='w-full h-10 bg-[#333] rounded-md px-4 pr-10 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-purple-600'
+                                    />
+                                    <button className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-600'>
+                                        <IoSearch className='text-xl' />
+                                    </button>
+                                </div>
+                                <div className=' flex justify-center items-center gap-4 '>
+                                    <span className='text-white bg-indigo-500 p-2 rounded-md text-xl '><FaReddit /></span>
+                                    <span className='text-white  bg-blue-500 p-2 rounded-md text-xl '><FaTelegram /></span>
+                                    <span className='text-white  bg-red-500 p-2 rounded-md text-xl '><FaTwitter /></span>
+
+
+                                </div>
+                            </div>
+
+                        )
+                    }
+                </div>
+
+
+
+
                 <div>
                     <button
                         className="rounded-3xl text-white bg-purple-900 font-semibold text-lg px-3 py-2 w-28"
@@ -72,6 +118,7 @@ const Navbar = () => {
                 )}
             </nav>
         </>
+
     );
 };
 
