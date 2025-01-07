@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Opening from './pages/Opening'
+import Home from './pages/Home'
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Opening />} />
+        <Route path='/home' element={<Home />} />
+
       </Routes>
     </>
   )

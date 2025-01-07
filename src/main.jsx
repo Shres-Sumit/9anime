@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <div className='bg-gray-950 min-h-screen' >
+    <div className='bg-[#222] min-h-screen' >
 
       <App />
     </div>
