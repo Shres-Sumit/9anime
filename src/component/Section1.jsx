@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Section1 = () => {
     return (
@@ -29,7 +30,7 @@ const Section1 = () => {
                     Connect with us in
                     twitter</div>
                 <div class="flex justify-center bg-purple-900 rounded px-5 py-[15px] mt-5 text-xl tracking-wide ">
-                    <a href="" class="text-white">Go to home page</a>
+                    <Link to="/home" class="text-white">Go to home page</Link>
 
                 </div>
             </div>

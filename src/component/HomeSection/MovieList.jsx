@@ -1,37 +1,18 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useMovie } from '../../GlobalContext/FlimFetch'
 
 const MovieList = () => {
-    const [movieList, setMovieList] = useState([])
-    const [loading, SetLoading] = useState(false)
-    const [error, setError] = useState(null);
     const [displayCount, setDisplayCount] = useState(15)
+    const { movieList, isLoading, error } = useMovie()
 
 
-    const getAllMovies = async () => {
-        try {
-            SetLoading(true)
-            const { data } = await axios.get(`https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies-1980s.json `)
-            setMovieList(data.slice(0, 50))
-            console.log(data.slice(0, 50))
-        } catch (error) {
-            setError(error.message)
-        }
-        finally {
-            SetLoading(false)
-        }
-    }
-
-    useEffect(() => {
-
-        getAllMovies()
-    }, [])
 
     const handleSeeMore = () => {
         setDisplayCount(prev => prev + 5)
     }
 
-    if (loading) {
+    if (isLoading) {
         return (
             <div className="container py-8">
                 <div className="flex items-center justify-center">
